@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="HeadsAndHands" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextView" destination="blA-4s-crB" id="y4m-HQ-fnk"/>
+                <outlet property="enterButton" destination="kDB-Wq-Jo4" id="jz4-PG-rHr"/>
+                <outlet property="passwordTextView" destination="cRA-Ae-pmP" id="POs-WF-kv4"/>
+                <outlet property="registerButtonBottomConstraint" destination="XXI-kY-SSi" id="ar8-9q-jBp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="384" placeholderIntrinsicHeight="45" translatesAutoresizingMaskIntoConstraints="NO" id="blA-4s-crB" customClass="HintTextView" customModule="HeadsAndHands" customModuleProvider="target">
+                    <rect key="frame" x="15" y="166" width="345" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="384" placeholderIntrinsicHeight="45" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-Ae-pmP" customClass="HintTextView" customModule="HeadsAndHands" customModuleProvider="target">
+                    <rect key="frame" x="15" y="223" width="345" height="45"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDB-Wq-Jo4">
+                    <rect key="frame" x="114" y="556" width="147" height="44"/>
+                    <color key="backgroundColor" red="1" green="0.60784313725490191" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="147" id="hTL-Kd-2TS"/>
+                        <constraint firstAttribute="height" constant="44" id="zfY-wP-sq0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <state key="normal" title="Войти">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="enterButtonPressed" destination="-1" eventType="touchUpInside" id="zUt-uu-XMk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blk-U9-sX2">
+                    <rect key="frame" x="8" y="616" width="359" height="30"/>
+                    <color key="tintColor" red="0.21568627450980393" green="0.52156862745098043" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="У мня еще нет аккаунта. Создать."/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kDB-Wq-Jo4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0g0-2F-T74"/>
+                <constraint firstItem="cRA-Ae-pmP" firstAttribute="top" secondItem="blA-4s-crB" secondAttribute="bottom" constant="12" id="1FZ-3V-cg4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="blA-4s-crB" secondAttribute="trailing" constant="15" id="3EU-5f-zQT"/>
+                <constraint firstItem="kDB-Wq-Jo4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cRA-Ae-pmP" secondAttribute="bottom" constant="8" id="9ms-QO-P1r"/>
+                <constraint firstItem="blA-4s-crB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="999" constant="146" id="JRk-2G-rsG"/>
+                <constraint firstItem="blk-U9-sX2" firstAttribute="top" secondItem="kDB-Wq-Jo4" secondAttribute="bottom" constant="16" id="Kk0-vp-ca6"/>
+                <constraint firstItem="blA-4s-crB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="MSX-y2-1Wq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="blk-U9-sX2" secondAttribute="trailing" constant="8" id="SrY-K1-NuN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="blk-U9-sX2" secondAttribute="bottom" constant="21" id="XXI-kY-SSi"/>
+                <constraint firstItem="cRA-Ae-pmP" firstAttribute="trailing" secondItem="blA-4s-crB" secondAttribute="trailing" id="YkT-Bp-fni"/>
+                <constraint firstItem="blk-U9-sX2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="lZ7-la-xoc"/>
+                <constraint firstItem="cRA-Ae-pmP" firstAttribute="leading" secondItem="blA-4s-crB" secondAttribute="leading" id="tTO-Nw-3jp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="45" y="33"/>
+        </view>
+    </objects>
+</document>
